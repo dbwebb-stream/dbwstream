@@ -1,0 +1,37 @@
+{
+  "apps": [
+    {
+      "name": "irc",
+      "script": "./dbwsirc/index.js",
+      "cwd": "./dbwsirc",
+      "env": {
+        "PORT": 1337
+      }
+    },
+    {
+      "name": "gitter",
+      "script": "./dbwsgitter/index.js",
+      "cwd": "./dbwsgitter",
+      "env": {
+        "PORT": 1338
+      }
+    },
+    {
+      "name": "funnel",
+      "script": "./dbwsfunnel/index.js",
+      "cwd": "./dbwsfunnel",
+      "env": {
+        "PORT": 1339
+      }
+    },
+    {
+      "name": "frontend",
+      "script": "./dbwsfront/bin/www",
+      "cwd": "./dbwsfront",
+      "env": {
+        "PORT": 1340,
+        "FUNNEL": "localhost:1339"
+      }
+    }
+  ]
+}
